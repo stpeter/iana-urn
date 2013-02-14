@@ -8,7 +8,7 @@
 <?rfc toc="yes"?>
 <?rfc tocdepth="4"?>
 
-<rfc category="info" ipr="trust200902" docName="draft-saintandre-iana-urn-00">
+<rfc category="info" ipr="trust200902" docName="draft-saintandre-iana-urn-01">
 
   <?xml-stylesheet type='text/xsl' href='rfc2629.xslt' ?>
 
@@ -32,13 +32,13 @@
     </author>
 
     <author initials="M." surname="Cotton" fullname="Michelle Cotton">
-      <organization>IANA</organization>
+      <organization abbrev='ICANN'>Internet Corporation for Assigned Names and Numbers</organization>
       <address>
         <postal>
-          <street>4676 Admiralty Way Suite 330</street>
-          <city>Marina Del Rey</city>
+          <street>12025 Waterfront Drive, Suite 300</street>
+          <city>Los Angeles</city>
           <region>CA</region>
-          <code>90292-6601</code>
+          <code>90094-2536</code>
           <country>USA</country>
         </postal>
         <phone>+1-310-823-9358</phone>
@@ -46,12 +46,13 @@
       </address>
     </author>
 
-    <date day="7" month="November" year="2012"/>
+    <date day="13" month="February" year="2013"/>
 
     <keyword>IANA</keyword>
     <keyword>Internet Assigned Numbers Authority</keyword>
     <keyword>Uniform Resource Name</keyword>
     <keyword>URN</keyword>
+    <keyword>NID</keyword>
     
     <abstract>
       <t>This document defines a Uniform Resource Name (URN) namespace for uniquely identifying information contained in registries maintained by the Internet Assigned Numbers Authority (IANA).</t>
@@ -66,7 +67,7 @@
       <t>Some Internet protocols need persistent identifiers for the entries contained in IANA registries.  However, currently such identifiers do not exist, for several reasons:</t>
       <t>
         <list style='numbers'>
-          <t>Each IANA registry is located at an HTTP URI (e.g., "http://www.iana.org/assignments/sdp-security-descriptions/sdp-security-descriptions.xml"), but there are no "pointers" to specific entries in each registry (e.g., the "AES_256_CM_HMAC_SHA1_80" entry in the SRTP Crypto Suite registry located at that URI).<vspace blankLines='1'/></t>
+          <t>Each IANA registry is located at an HTTP URI (e.g., "http://www.iana.org/assignments/sdp-security-descriptions/sdp-security-descriptions.xml"), but there are no "pointers" to specific entries in each registry (e.g., the "AES_256_CM_HMAC_SHA1_80" entry in the SRTP Crypto Suite registry located at that URI).</t>
           <t>From time to time, the IANA might change the URIs for its registries (as was done not long ago when the IANA changed all of its registries to use Extensible Markup Language <xref target='XML'/> files instead of plain text files).</t>
         </list>
       </t>
@@ -94,14 +95,14 @@ Registration Information:
 Declared Registrant of the Namespace:
 
    Registering organization
-      Organization: Internet Assigned Numbers Authority (IANA)
-      Address: 4676 Admiralty Way, Suite 330
-               Marina del Rey, CA 
-               90292-6601 
-               USA
+      Organization: 
+          Internet Corporation for Assigned Names and Numbers (ICANN)
+      Address: 
+          12025 Waterfront Drive, Suite 300
+          Los Angeles, CA 90094-2536 USA
 
    Designated contact
-      Role: IANA team
+      Role: IANA Department
       Email: iana@iana.org
 
 Declaration of Syntactic Structure:
@@ -109,7 +110,7 @@ Declaration of Syntactic Structure:
    The Namespace Specific String (NSS) of all URNs that use the
    "iana" NID shall have the following structure:
 
-      urn:iana:{RegistryName}:{EntryName}
+      urn:iana:{RegistryString}:{EntryName}
   
    The keywords have the following meaning:
 
@@ -465,6 +466,10 @@ specifications of each URI scheme.
 </reference>
 
     </references>
+
+    <section title="Acknowledgements" anchor="acks">
+      <t>Thanks to Martin Duerst for his feedback.</t>
+    </section>
 
   </back>
 
